@@ -1,0 +1,9 @@
+#logoCreated,
+#photographer {
+    opacity: 0;
+}
+
+.appear {
+    opacity: 1 !important;
+    transition: 1s;
+}
