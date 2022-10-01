@@ -21,18 +21,29 @@ class InfoForm(forms.ModelForm):
         ('map_page', 'Map Page'),
         ('ecommerce_page', 'Ecommerce Page'),
     )
-    brand_name = forms.CharField(label='', widget=forms.TextInput(attrs={'placeholder' : 'Business/Brand Name?'}))
-    logo = forms.CharField(label='Do you have a logo?', widget=forms.RadioSelect(choices=YES_NO))
-    would_you_like_one_created = forms.CharField(label='Would you like one created?', widget=forms.RadioSelect(choices=YES_NO))
-    what_is_the_service = forms.CharField(label='', widget=forms.Textarea(attrs={'placeholder' : 'What service are you providing?'}))
-    contact_number = forms.CharField(label='', widget=forms.NumberInput(attrs={'placeholder' : 'Contact number'}))
-    email = forms.CharField(label='', widget=forms.EmailInput(attrs={'placeholder' : 'Email address'}))
-    timeframe = forms.CharField(label='When do you need this project complete?', widget=forms.RadioSelect(choices=TIMEFRAME))
-    aim  = forms.CharField(label='', widget=forms.Textarea(attrs={'placeholder' : 'What will be the aim for your website?'}))
-    products_product_images = forms.CharField(label='Do you have any product images?', widget=forms.RadioSelect(choices=YES_NO))
-    products_info = forms.CharField(label='Do you have product info (eg, product names, pricing, descriptions etc.)?', widget=forms.RadioSelect(choices=YES_NO))
-    pages_needed = forms.CharField(label="Select which pages you'll need?", widget=forms.RadioSelect(choices=PAGES_NEEDED))
 
+    brand_name = forms.CharField(label='', widget=forms.TextInput(
+        attrs={'placeholder': 'Business/Brand Name?'}))
+    logo = forms.CharField(label='Do you have a logo?',
+                           widget=forms.RadioSelect(choices=YES_NO))
+    would_you_like_one_created = forms.CharField(
+        label='Would you like one created?', widget=forms.RadioSelect(choices=YES_NO))
+    what_is_the_service = forms.CharField(label='', widget=forms.Textarea(
+        attrs={'placeholder': 'What service are you providing?'}))
+    contact_number = forms.CharField(label='', widget=forms.NumberInput(
+        attrs={'placeholder': 'Contact number'}))
+    email = forms.CharField(label='', widget=forms.EmailInput(
+        attrs={'placeholder': 'Email address'}))
+    timeframe = forms.CharField(
+        label='When do you need this project complete?', widget=forms.RadioSelect(choices=TIMEFRAME))
+    aim = forms.CharField(label='', widget=forms.Textarea(
+        attrs={'placeholder': 'What will be the aim for your website?'}))
+    products_product_images = forms.CharField(
+        label='Do you have any product images?', widget=forms.RadioSelect(choices=YES_NO))
+    products_info = forms.CharField(
+        label='Do you have product info (eg, product names, pricing, descriptions etc.)?', widget=forms.RadioSelect(choices=YES_NO))
+    pages_needed = forms.CharField(
+        label='What pages will you need? eg. About page, Ecommerce page etc.', widget=forms.Textarea())
 
     class Meta:
         model = InfoFormModel
@@ -48,5 +59,5 @@ class InfoForm(forms.ModelForm):
             'products_product_images',
             'products_info',
             'pages_needed',
-        )
 
+        )

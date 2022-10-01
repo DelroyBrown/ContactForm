@@ -1,9 +1,36 @@
 #logoCreated,
 #photographer {
     opacity: 0;
+    transition: 1s;
 }
 
 .appear {
     opacity: 1 !important;
     transition: 1s;
 }
+
+body {
+    background-color: #F7F7F5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* HEADER SECTION */
+.header-section h1 {
+    font-size: 16vw;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 8px;
+}
+
+.header-section {
+    border-bottom: 5px solid #333;
+}
+
+/* HEADER SECTION */
